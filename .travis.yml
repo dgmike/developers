@@ -1,0 +1,15 @@
+language: php
+php:
+    - 5.6
+    - 5.5
+    - 5.4
+    - 5.3
+install:
+    - env
+    - cd ${TRAVIS_BUILD_DIR}/want-to-be-clickbus/group-by-interval
+    - composer install
+script:
+    - env
+    - cd ${TRAVIS_BUILD_DIR}/want-to-be-clickbus/group-by-interval
+    - ./vendor/bin/phpunit --coverage-text ./tests
+
