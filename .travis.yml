@@ -1,0 +1,15 @@
+language: php
+php:
+    - 5.6
+    - 5.5
+    - 5.4
+    - 5.3
+install:
+    - env
+    - cd ${TRAVIS_BUILD_DIR}/want-to-be-clickbus/cash-machine
+    - composer install
+script:
+    - env
+    - cd ${TRAVIS_BUILD_DIR}/want-to-be-clickbus/cash-machine
+    - ./vendor/bin/phpunit --coverage-text ./tests
+
